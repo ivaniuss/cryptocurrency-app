@@ -3,6 +3,7 @@ import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi'
 import { useGetCryptosQuery } from '../services/cryptoApi'
 import moment from 'moment'
 import {Row, Col, Card, Avatar, Typography, Select} from 'antd'
+import Loader from './Loader'
 const News = ({simplified}) => {
     const [newsCategory, setNewsCategory] = useState('Cryptocurrency')
     const {data: cryptoNews, isFetching} = useGetCryptoNewsQuery({newsCategory, count: simplified? 6 : 12})
@@ -10,7 +11,7 @@ const News = ({simplified}) => {
     const demoImage = 'http://coinrevolution.com/wp-content/uploads/2020/06/cryptonews.jpg'
   
 
-    if(isFetching) return 'Loading...'
+    if(isFetching) return <Loader/>
     else if(!isFetching && !cryptoNews) return 'No data'
 
     return (

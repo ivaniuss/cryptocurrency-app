@@ -38,6 +38,7 @@ a:hover{
 }
 .nav-container{
     position: fixed;
+    top: 0;
     left: 0;
     height: 100vh;
     background-color: rgb(0, 21, 41);
@@ -72,22 +73,9 @@ a:hover{
     justify-content: center;
     align-items: center;
 }
-
-@media screen and (max-width:1300px){
-    .main{
-        margin-left: 50px;
-    }
-}
-
-@media screen and (max-width:1170px){
-    .main{
-        margin-left: 50px;
-    }
-}
-
 @media screen and (max-width:1000px){
     .main{
-        margin-left: 100px;
+        padding-left: 16rem;
     }
 }
 
@@ -102,6 +90,7 @@ a:hover{
     }
 
     .main{
+        padding-left: 0;
         flex: 1;
         margin-top: 90px;
         margin-left: 0px;
@@ -346,9 +335,6 @@ width: 70%;
 }
 .show-more{
     margin-top: 0px !important;
-}
-.exchange-image{
-    margin: 0px 10px !important;
 }
 .search-crypto{
     margin: 20px auto 30px auto;
